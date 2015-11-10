@@ -19,7 +19,7 @@
         <td><%= vehicle.color %></td>
         <td><%= vehicle.condition %></td>
         <td><%= vehicle.price %></td>
-        <td><%= vehicle.category_id %></td>
+        <td><%= vehicle.category.name %></td>
         <td><%= link_to 'Show', vehicle %></td>
         <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
         <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
