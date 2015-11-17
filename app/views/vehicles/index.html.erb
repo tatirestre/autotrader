@@ -2,7 +2,7 @@
 
 <h1>Listing Vehicles</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Color</th>
@@ -20,9 +20,12 @@
         <td><%= vehicle.condition %></td>
         <td><%= vehicle.price %></td>
         <td><%= vehicle.category.name %></td>
-        <td><%= link_to 'Show', vehicle %></td>
-        <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
-        <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <td class="text-right">
+        <%= link_to 'Show', vehicle, class: "btn btn-link" %>
+        <%= link_to 'Edit', edit_vehicle_path(vehicle), class: "btn btn-link" %>
+        <%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +33,4 @@
 
 <br>
 
-<%= link_to 'New Vehicle', new_vehicle_path %>
+<%= link_to 'New Vehicle', new_vehicle_path, class: "btn btn-primary" %>
