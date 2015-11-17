@@ -34,6 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem 'friendly_id', '~> 5.1.0'
+gem "letter_opener", :group => :development
 gem 'simple_form'
 
 group :development, :test do
